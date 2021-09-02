@@ -183,6 +183,65 @@ th:nth-child(3), td:nth-child(3) {
 td {
     padding-right: 10px;
 }
+
+.svg-img {
+    text-align: center;
+}
+
+.daftpunk-img {
+    text-align: center;
+}
+
+.daftpunk-img svg {
+    width: 200px;
+    height: auto;
+}
+
+@keyframes sun-color{
+    0%   {fill: yellow;}
+    33%  {fill: orange;}
+    66%  {fill: orangered;}
+    100% {fill: red;}
+}
+
+.sun {
+    animation-duration: 8s;
+    animation-name: sun-color;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes visor-color-change {
+    0%   {fill: red;}
+    25%  {fill: blue;}
+    50%  {fill: greenyellow;}
+    75%  {fill: magenta;}
+    100% {fill: cyan;}
+}
+
+#path212:hover, #path444:hover {
+    animation-duration: .5s;
+    animation-name: visor-color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+@keyframes cloud-move {
+    from {
+      transform: translate(475px, 50px);
+    }
+    to {
+      transform: translate(355px, 50px);
+    }
+}
+
+.cloud-back {
+   animation: 10s cloud-move infinite normal linear;
+}
+
 /******** ABOUT page ENDS ********/
 
 /******** CONTACT page STARTS ********/
