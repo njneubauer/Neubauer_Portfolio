@@ -1,15 +1,19 @@
 /******** Default Formatting STARTS ********/
 :root {
-    --primary-color: lightblue;
-    /* --primary-color: lightgrey;     */
+    --primary-bg-color: lightblue;
+    --contact-polaroid-bg: whitesmoke;
     /* navbar colors */
     --navbar-background: #444;
     --nav-hover-color: white;
+    --nav-text-inactive: rgb(190, 190, 190);
     --nav-text-shadow-color: #1BC4F9;
     --active-link-color: white;
+    /* links */
+    --links-with-icons-color: black;
     --visted-link-color: purple;
-    /* contact pg colors */
     --contact-pg-link-hover: blue;
+    /* buttons */
+    --button-primary: #222;
     /* form colors */
     --form-border-color: #17a8d4;
     --form-input-bg-color: whitesmoke;
@@ -21,11 +25,14 @@
     --grid-shadow-hover: #222;
     --grid-shadow-color: #333;
     --grid-link-visited: black;
+
+    /* Fonts */
+
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--primary-color);
+    background-color: var(--primary-bg-color);
     margin: 0;
     z-index: 1;
 }
@@ -78,8 +85,8 @@ h2 {
     text-decoration: none;
     border: none;
     /* font-weight: bold; */
-    background-color: #222;
-    color: rgb(190, 190, 190);
+    background-color: var(--button-primary);
+    color:var(--nav-text-inactive);
     border-radius: 30px;
     padding: 15px;
     /* transitions */
@@ -138,7 +145,7 @@ header img {
 nav li a {
     margin-right: 10px;
     font-size: 16px;
-    color:rgb(190, 190, 190);
+    color: var(--nav-text-inactive);
     text-decoration: none;
     transition: 0.2s ease-out;
 }
@@ -310,7 +317,7 @@ td {
 
 .contact-info a {
     text-decoration: none;
-    color: black;
+    color: var(--links-with-icons-color)
 }
 
 .contact-info a:hover {
@@ -337,7 +344,7 @@ td {
 
 .polaroid {
     height: 300px;
-    background-color: whitesmoke;
+    background-color: var(--contact-polaroid-bg);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 240px;
     border-radius: 50px;
@@ -423,7 +430,6 @@ input[type=submit] {
         grid-gap: 5px;
         padding: 20px;
         margin: 0px 10% auto;
-        /* background-color: #1BC4F9; */
     }
 
     .grid_item {
@@ -432,13 +438,13 @@ input[type=submit] {
         width: auto;
         border: 5px solid var(--grid-border-color);
         border-radius: 10px;
-        box-shadow: 0 0 5px var(--grid-shadow-color);
+        box-shadow: 0 0 8px var(--grid-shadow-color);
+        transition-duration: .2s;
+        transition-timing-function: ease-out;
     }
 
     .grid_item:hover {
-        /* transform: rotate(5deg); */
         box-shadow: 0 0 15px var(--grid-shadow-hover);
-        transition-duration: 0.5s;
     }
     
     .grid-link, .grid_item:visited {
@@ -448,7 +454,7 @@ input[type=submit] {
 
     .grid_item h1 {
         margin: 10px 0;
-        font-size: 26pt;
+        font-size: 21pt;
     }
 
     .grid_item p {
@@ -521,10 +527,6 @@ input[type=submit] {
         grid-row: auto / auto;
     }
 
-    .grid_item h1 {
-        font-size: 21pt;
-    }
-
     .about_content {
         width: 75%
     }
@@ -582,10 +584,6 @@ input[type=submit] {
         grid-row: auto / auto;
     }
 
-    .grid_item h1 {
-        font-size: 21pt;
-    }
-
     .profile_portrait_index {
         width: 275px;
     }
@@ -597,15 +595,18 @@ input[type=submit] {
         margin-right: 0;
     }
 
+    div.basic_info {
+        text-align: center;
+    }
+
+    .resume-button-margin {
+        margin: 5px;
+    }
    
 }
 
 /* small screens */
 @media all and (max-width: 340px) {
-    .grid_item h1 {
-        font-size: 21pt;
-    }
-
     .profile_portrait_index {
         width: 80%;
     }
@@ -613,10 +614,5 @@ input[type=submit] {
     .form_format {
         width: 90%;
         margin: 0px 5px;
-    }
-
-    .grid_item h1 {
-        font-size: 21pt;
-        flex: 0 1 50px;
     }
 }
