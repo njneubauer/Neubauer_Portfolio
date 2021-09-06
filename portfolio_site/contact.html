@@ -35,46 +35,55 @@
         </nav>
     </header>
 
-    <div class="center_content_block">
-        <div class="polaroid">
-            <img class="profile_portrait_contact" src="img/Profile_Pic.jpg" alt="Profile picture">
-            <div class="container_portrait_caption">
-                <p>Aspiring <br /> Full Stack Web Developer</p>
+   <!-- Contact Info -->
+   <div class="center_content_block">
+        <h1>Contact Information</h1>
+   </div>
+    
+    
+    <div class="contact-grid">
+        <div class="contact-grid-item-1" >
+            <div class="form-container">
+                <form class="form_format" action="" method="post">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" required="required">
+        
+                    <label for="e-mail">E-mail: </label>
+                    <input type="email" id="e-mail" required="required">
+                    
+                    <label for="telephone number">Telephone: </label>
+                    <input type="tel" id="telephone number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="224-489-8878" onfocus="this.placeholder=''">
+                
+                    <label for="message">Message: </label>
+                    <textarea maxlength="240" id="message" required="required" placeholder="Drop me a line!" onfocus="this.placeholder=''"></textarea>
+                    <input class="button" type="submit" value="Send message">
+                </form>
             </div>
         </div>
-    </div>
 
-   <!-- Contact Info -->
-    <div class="contact">
-        <p><b>Cell: </b> <a href="tel:12244898878">224-489-8878<img src="img/svgs/link_external_icon.svg" alt="link_external_icon"></a></p>
-        <p><b>Email: </b><a href="mailto:njneubauer@gmail.com">njneubauer@gmail.com<img src="img/svgs/link_external_icon.svg" alt="link_external_icon"></a></p>
-        <p><b>Hometown: </b><a href="https://goo.gl/maps/rWvBaUdXJDK7KD9q9" target="_blank">Mundelein, IL 60060<img src="img/svgs/link_external_icon.svg" alt="link_external_icon"></a></p>
-    </div>
-    <!-- Contact Info END -->
+        <div class="contact-grid-item-2">
+                <div class="polaroid">
+                    <img class="profile_portrait_contact" src="img/Profile_Pic.jpg" alt="Profile picture">
+                    <div class="container_portrait_caption">
+                        <p>Aspiring <br /> Full Stack Web Developer</p>
+                    </div>
+                </div>
+            
 
-    <div class="call_to_action center_content">
-        <h1><a href="mailto:njneubauer@gmail.com">Email Me!</a></h1>
-    </div>
+            <div class="contact-info">
+                <p><b>Cell: </b> <a href="tel:12244898878">224-489-8878 &nbsp;<img src="img/svgs/link_external_icon.svg" alt="link_external_icon"></a></p>
+                <p><b>Email: </b><a href="mailto:njneubauer@gmail.com">njneubauer@gmail.com &nbsp;<img src="img/svgs/link_external_icon.svg" alt="link_external_icon"></a></p>
+                <p><b>Hometown: </b><a href="https://goo.gl/maps/rWvBaUdXJDK7KD9q9" target="_blank">Mundelein, IL 60060 &nbsp;<img src="img/svgs/link_external_icon.svg" alt="link_external_icon"></a></p>
+            </div>
+        </div>
+        <!-- Contact Info END -->
 
-    <!-- FORM -->
-    <div class="form_container">
-        <form class="form_format" action="" method="post">
-            <label for="name">Name: </label>
-            <input type="text" id="name" required="required"><br>
-            <br>
-            <label for="e-mail">E-mail: </label>
-            <input type="email" id="e-mail" required="required"><br>
-            <br>
-            <label for="telephone number">Telephone: </label>
-            <input type="tel" id="telephone number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="224-489-8878" onfocus="this.placeholder=''"><br>
-            <label class="format_instructions">&nbsp; Format ex: 123-456-7891</label>
-            <br>
-            <label for="message">Message: </label>
-            <textarea maxlength="240" id="message" required="required" placeholder="Drop me a line!" onfocus="this.placeholder=''"></textarea>
-            <input class="button" type="submit" value="Send message">
-        </form>
+        <!-- <div class="call_to_action center_content">
+            <h1><a href="mailto:njneubauer@gmail.com">Email Me!</a></h1>
+        </div> -->
+
+
     </div>
-      <!-- FORM END -->
 
     <!-- Footer Starts -->
     <footer class="footer-icons-center">

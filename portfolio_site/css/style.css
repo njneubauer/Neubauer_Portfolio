@@ -1,9 +1,29 @@
 /******** Default Formatting STARTS ********/
+:root {
+    --primary-color: lightgrey;
+    --navbar-background: #444;
+    --nav-hover-color: white;
+    --active-link-color: white;
+    --visted-link-color: purple;
+    --contact-pg-link-hover: blue;
+    --form-border-color: #17a8d4;
+    --form-input-bg-color: whitesmoke;
+    --form-input-focus-color: whitesmoke;
+    --grid-border-color: #1BC4F9;
+    --grid-bg-color: whitesmoke;
+    --grid-shadow-color: #222;
+    --grid-link-visited: black;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgrey;
+    background-color: var(--primary-color);
     margin: 0;
     z-index: 1;
+}
+
+div {
+    margin: 10px
 }
 
 h1 {
@@ -15,10 +35,6 @@ h1 {
 h2 {
     margin-top: 10px;
     font-size: 18pt;
-}
-
-div {
-    margin: 10px
 }
 
 .center_content_flex {
@@ -64,7 +80,7 @@ div {
 
 button:hover,
 .button:hover {
-    color: white;
+    color: var(--nav-hover-color);
     opacity: 0.9;
 }
 /******** Default Formatting ENDS ********/
@@ -80,7 +96,7 @@ button:hover,
 header img {
     width: 100%;
     height: 61px;
-    background-color: #444;
+    background-color: var(--navbar-background);
 }
 
 .page-header {   
@@ -100,7 +116,7 @@ header img {
 
 .nav_list {
     list-style-type: none;
-    background-color: #444;
+    background-color: var(--navbar-background);
     margin-top: 0px;
     padding: 21.5px 15px;
 }
@@ -119,14 +135,13 @@ nav li a {
 }
 
 nav li a:hover:not(.active) {
-    color: white;
-    text-shadow: 0 0 15px white;
+    color: var(--nav-hover-color);
+    text-shadow: 0 0 15px var(--nav-hover-color);
 }
 
 .active {
-    color: white;
-    border-bottom: 2px white solid;
-    
+    color: var(--active-link-color);
+    border-bottom: 2px var(--active-link-color) solid; 
 }
 /******** Navigation Formatting ENDS ********/
 
@@ -160,7 +175,7 @@ nav li a:hover:not(.active) {
 }
 
 .about_content a:visited {
-    color: purple;
+    color: var(--visted-link-color);
 }
 
 table, thead, tbody, tr {
@@ -256,35 +271,54 @@ td {
 }
 
 .call_to_action a:visited {
-    color: purple;
+    color: var(--visted-link-color);
 }
 
-.contact {
-    display: inline-flex;
-    justify-content: center;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
     width: 100%;
+    margin: 0;
 }
 
-.contact a {
+.contact-grid-item-1 {
+    margin: 0;
+}
+
+.contact-grid-item-2 {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 75px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.contact-info a {
     text-decoration: none;
     color: black;
 }
 
-.contact a:hover {
-    color: blue;
+.contact-info a:hover {
+    color: var(--contact-pg-link-hover);
     padding-bottom: 3px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid var(--contact-pg-link-hover);
 }
 
-.contact p {
+.contact-info p {
     padding: 0px 20px;
 }
 
-.contact img {
+.contact-info img {
     width: 15px;
     height: auto;
-    margin-left: 5px;
 }
+
     /* Profile Picture STARTS */
 .profile_portrait_contact {
     width: 100%;
@@ -293,31 +327,29 @@ td {
 }
 
 .polaroid {
+    height: 300px;
     background-color: whitesmoke;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
     width: 240px;
     border-radius: 50px;
-    margin: 0 auto;
 }
 
-.container_portrait_caption {
+.container_portrait_caption, .container_portrait_caption p {
+    text-align: center;
     margin: 0;
-    padding: 8px 0px;
-} 
-
-.container_portrait_caption p {
-    margin: 0px 0px 3px 0px;
+    padding: 2px 0px;
 }
+
     /* Profile Picture ENDS */
     /* Form STARTS */
-.form_container {
-    width: 100%;
+.form-container {
+    display: block;
+    margin: 0;
 }
 
 .form_format {
     width: 300px;
-    margin-right: auto;
+    margin-right: 20px;
     margin-left: auto;
 }
 
@@ -329,17 +361,19 @@ td {
 textarea {
     display: block;
     width: 100%;
-    background-color: lightgrey;
-    border: 2px solid #17a8d4;
+    height: 100px;
+    background-color: var(--form-input-bg-color);
+    border: 2px solid var(--form-border-color);
     border-radius: 5px;
 }
 
 textarea:focus {
-    background-color: whitesmoke;
+    background-color: var(--form-input-focus-color);
 }
 
 label {
     display: block;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
@@ -347,14 +381,14 @@ input:not([type=submit]) {
     width: 100%;
     height: 16pt;
     border: none;
-    border: 2px solid #17a8d4;
+    border: 2px solid var(--form-border-color);
     border-radius: 4px 4px 4px 4px;
-    background-color: lightgrey;
+    background-color: var(--form-input-bg-color);
 }
 
 input:focus {
     border: 50px;
-    background-color: whitesmoke;
+    background-color: var(--form-input-focus-color);
 }
 
 input[type=submit] {
@@ -385,17 +419,22 @@ input[type=submit] {
 
     .grid_item {
         padding: 10px;
-        background-color: whitesmoke;
+        background-color: var(--grid-bg-color);
         width: auto;
-        border: 5px solid #1BC4F9;
+        border: 5px solid var(--grid-border-color);
         border-radius: 10px;
         box-shadow: 0 0 5px #333;
     }
 
     .grid_item:hover {
         /* transform: rotate(5deg); */
-        box-shadow: 0 0 15px #222;
+        box-shadow: 0 0 15px var(--grid-shadow-color);
         transition-duration: 0.5s;
+    }
+    
+    .grid-link, .grid_item:visited {
+        color: var(--grid-link-visited);
+        text-decoration: none;
     }
 
     .grid_item h1 {
@@ -439,6 +478,25 @@ input[type=submit] {
 /******** Footer Icons ENDS ********/
 
 /******** MEDIA QUERIES ********/
+@media all and (max-width:1200px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .contact-grid-item-2 {
+        grid-row: 1;
+        justify-content: center;
+    }
+
+    .form_format {
+        margin: 0 auto;
+    }
+}
 
 /* Tablets */
 @media all and (max-width:1023px) {
@@ -459,6 +517,26 @@ input[type=submit] {
     .about_content {
         width: 75%
     }
+}
+
+@media all and (max-width:687px) {
+    .contact-grid {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .contact-grid-item-2 {
+        justify-content: center;
+    }
+
+    .form_format {
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        margin-top: 10px;
+    }
+
 }
 
 /* Smartphones */
