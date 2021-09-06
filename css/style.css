@@ -590,25 +590,34 @@ input[type=submit] {
 }
 
 @media all and (max-width: 580px) {
-   .contact-info {
+    .contact-info {
         margin-top: 10px;
         margin-right: 0;
     }
 
-    div.basic_info {
+    .basic_info, .basic_info h1, .basic_info h2 .basic_info p {
         text-align: center;
+        line-height: normal;
+        margin: 5px
+    }
+
+    .center_content_flex {
+        margin: 0px;
+    }
+
+    .profile_portrait_index {
+        width: 50%;
     }
 
     .resume-button-margin {
-        margin: 5px;
+        margin: 20px 0;
     }
-   
 }
 
 /* small screens */
 @media all and (max-width: 340px) {
     .profile_portrait_index {
-        width: 80%;
+        width: 30%;
     }
 
     .form_format {
