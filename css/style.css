@@ -25,9 +25,8 @@
     --grid-shadow-hover: #222;
     --grid-shadow-color: #333;
     --grid-link-visited: black;
-
     /* Fonts */
-
+    --index-h1: 'Permanent Marker', cursive;
 }
 
 body {
@@ -42,9 +41,9 @@ div {
 }
 
 h1 {
-    margin: 10px;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 26pt;
+    margin: 10px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30pt;
     line-height: normal;
 }
 
@@ -168,6 +167,11 @@ nav li a:hover:not(.active) {
     width: 300px;
     border-radius: 50%;
 }
+
+.basic_info h1 {
+    font-family: var(--index-h1);
+}
+
 /******** INDEX page ENDS ********/
 
 /******** ABOUT Page STARTS ********/
