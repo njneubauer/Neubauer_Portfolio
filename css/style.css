@@ -219,8 +219,16 @@ td {
     padding-right: 10px;
 }
 
-.svg-img {
+.svg-berlin {
+    display: block;
+    margin: 0 auto;
     text-align: center;
+}
+
+.svg-berlin svg {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
 }
 
 .daftpunk-img {
