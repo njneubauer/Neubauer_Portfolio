@@ -514,13 +514,12 @@ input[type=submit] {
 
 /******** WORK page STARTS ********/
     /* start grid fallback */
-@supports not(display: grid) {
     .grid_item {
         display: inline-block;
         width: 33%;
         margin: 20px;
     }
-}
+    
     /* end grid fallback */
 @supports (display: grid) {
     .grid {
